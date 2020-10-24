@@ -1,4 +1,13 @@
-<textarea rows = "6" [value]="'Digite aqui'"></textarea>
-<hr>
-<button (click)= "onAddPost()">Save Post</button>
-<p>{{ newPost }}</p>
+<mat-card>
+
+  <mat-form-field>
+    <textarea matInput rows = "6" [(ngModel)]="enteredValue"></textarea>
+    </mat-form-field>
+    <button
+    mat-raised-button
+    color ="primary"
+    (click)= "onAddPost()">Save Post</button><!--event binding-->
+
+</mat-card>
+
+<p>{{ newPost }}</p><!--string interpolation-->
